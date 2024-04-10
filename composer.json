@@ -5,8 +5,8 @@
     "keywords": ["navigation", "php"],
     "license": "No-License",
     "require": {
-        "illuminate/collections": "^10.48",
-        "illuminate/support": "^10.48"
+        "illuminate/collections": "9",
+        "illuminate/support": "^9"
     },
     "autoload": {
         "psr-4": {
