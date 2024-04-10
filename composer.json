@@ -5,8 +5,7 @@
     "keywords": ["navigation", "php"],
     "license": "No-License",
     "require": {
-        "illuminate/collections": "9",
-        "illuminate/support": "^9"
+        "laravel/framework": "^9"
     },
     "autoload": {
         "psr-4": {
