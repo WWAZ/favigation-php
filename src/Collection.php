@@ -1,17 +1,16 @@
 <?php
-
 namespace wwaz\Favigation;
 
 class Collection extends \Illuminate\Support\Collection
 {
     /**
      * Constructor.
-     * 
+     *
      * @param array $items
      */
     public function __construct(array $items)
     {
-        if (!($items[0] instanceof \wwaz\Favigation\Interface\ItemInterface)) {
+        if (! ($items[0] instanceof \wwaz\Favigation\Interface\ItemInterface)) {
             throw new \Exception('Collection takes only objectes implemnting wwaz\Favigation\Interface\ItemInterface');
         }
 
@@ -20,7 +19,7 @@ class Collection extends \Illuminate\Support\Collection
 
     /**
      * Returns collection as array.
-     * 
+     *
      * @return array
      */
     public function toArray(): array

@@ -1,5 +1,4 @@
 <?php
-
 namespace wwaz\Favigation;
 
 use Illuminate\Support\Str;
@@ -13,13 +12,13 @@ abstract class Item implements ItemInterface
      * @var array
      */
     protected $keys = [
-        'id' => null,
+        'id'       => null,
         'parentId' => null,
         'ordering' => null,
-        'title' => null,
-        'url' => null,
-        'target' => null,
-        'icon' => null,
+        'title'    => null,
+        'url'      => null,
+        'target'   => null,
+        'icon'     => null,
     ];
 
     /**
@@ -68,7 +67,7 @@ abstract class Item implements ItemInterface
     {
         $required = ['id', 'title'];
         foreach ($required as $r) {
-            if (!isset($this->keys[$r]) || is_null($this->keys[$r])) {
+            if (! isset($this->keys[$r]) || is_null($this->keys[$r])) {
                 throw new \Exception('Key "' . $r . '" must be set');
             }
         }
@@ -102,13 +101,13 @@ abstract class Item implements ItemInterface
     public function toArray(): array
     {
         return [
-            'id' => $this->getId(),
+            'id'       => $this->getId(),
             'parentId' => $this->getParentId(),
             'ordering' => $this->getOrdering(),
-            'title' => $this->getTitle(),
-            'url' => $this->getUrl(),
-            'target' => $this->getTarget(),
-            'icon' => $this->getIcon(),
+            'title'    => $this->getTitle(),
+            'url'      => $this->getUrl(),
+            'target'   => $this->getTarget(),
+            'icon'     => $this->getIcon(),
         ];
     }
 
@@ -170,7 +169,7 @@ abstract class Item implements ItemInterface
      *
      * @return wwaz\Favigation\Item | null
      */
-    public function getParent(): \wwaz\Favigation\Item | null
+    public function getParent(): \wwaz\Favigation\Item  | null
     {
         return $this->parent;
     }
@@ -230,7 +229,7 @@ abstract class Item implements ItemInterface
             }
         }
         $val = $item->$method();
-        if (!in_array($val, $res)) {
+        if (! in_array($val, $res)) {
             $res[] = $val;
         }
         return $res;

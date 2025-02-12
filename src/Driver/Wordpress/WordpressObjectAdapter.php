@@ -1,5 +1,4 @@
 <?php
-
 namespace wwaz\Favigation\Driver\Wordpress;
 
 use \wwaz\Favigation\Item as BaseItem;
@@ -7,17 +6,17 @@ use \wwaz\Favigation\Item as BaseItem;
 class WordpressObjectAdapter extends BaseItem
 {
     protected $item;
-    
+
     protected $keys = [
-        'id' => 'ID',
+        'id'       => 'ID',
         'parentId' => 'menu_item_parent',
         'ordering' => 'menu_order',
-        'title' => 'title',
-        'url' => 'url',
-        'target' => 'target',
-        'icon' => null
+        'title'    => 'title',
+        'url'      => 'url',
+        'target'   => 'target',
+        'icon'     => null,
     ];
-    
+
     public function __construct($item)
     {
         parent::__construct();
@@ -28,7 +27,7 @@ class WordpressObjectAdapter extends BaseItem
     {
         return array_merge(parent::toArray(), $this->item->toArray());
     }
-    
+
     public function getId(): int | string
     {
         return $this->item->ID;
@@ -95,7 +94,7 @@ class WordpressObjectAdapter extends BaseItem
         return $this;
     }
 
-    public function getIcon(): string | null 
+    public function getIcon(): string | null
     {
         return null;
     }

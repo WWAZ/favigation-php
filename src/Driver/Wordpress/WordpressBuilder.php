@@ -1,5 +1,4 @@
 <?php
-
 namespace wwaz\Favigation\Driver\Wordpress;
 
 use wwaz\Favigation\Driver\Wordpress\WordpressArrayAdapter;
@@ -14,7 +13,7 @@ class WordpressBuilder
     public function __construct($data, string $renderer)
     {
         $this->renderer = $renderer;
-        $this->build = $this->build($data);
+        $this->build    = $this->build($data);
     }
 
     public function __call($name, $arguments)

@@ -1,5 +1,4 @@
 <?php
-
 namespace wwaz\Favigation\Markup;
 
 abstract class MarkupCreator
@@ -92,8 +91,8 @@ abstract class MarkupCreator
      */
     public function __construct($tag, $array, $options = [])
     {
-        $this->tag = $this->checkTag($tag);
-        $this->array = $array;
+        $this->tag     = $this->checkTag($tag);
+        $this->array   = $array;
         $this->options = array_merge([
             'depth' => false,
         ], $options);
@@ -109,7 +108,7 @@ abstract class MarkupCreator
     protected function checkTag($tag)
     {
         $tag = strtolower($tag);
-        if (!in_array($tag, $this->allowedTags)) {
+        if (! in_array($tag, $this->allowedTags)) {
             throw new \Exception('Tag "' . $tag . '" is not supported. Choose one of those: ' . implode(', ', $this->allowedTags));
         }
         return $tag;
@@ -125,7 +124,7 @@ abstract class MarkupCreator
     public function setRootAttribute($name, $value)
     {
         $this->rootAttributes[] = [
-            'name' => $name,
+            'name'  => $name,
             'value' => $value,
         ];
         return $this;
@@ -141,7 +140,7 @@ abstract class MarkupCreator
     public function setLiAttribute($name, callable $function)
     {
         $this->liAttributes[] = [
-            'name' => $name,
+            'name'     => $name,
             'function' => $function,
         ];
         return $this;
@@ -157,7 +156,7 @@ abstract class MarkupCreator
     public function setUlAttribute($name, callable $function)
     {
         $this->ulAttributes[] = [
-            'name' => $name,
+            'name'     => $name,
             'function' => $function,
         ];
         return $this;
@@ -262,7 +261,7 @@ abstract class MarkupCreator
      */
     protected function getRootAttributes()
     {
-        if (!$this->rootAttributes) {
+        if (! $this->rootAttributes) {
             return '';
         }
         $m = [];

@@ -1,5 +1,4 @@
 <?php
-
 namespace wwaz\Favigation;
 
 use wwaz\Favigation\Markup\ArrayHandler\ParentChild;
@@ -8,14 +7,14 @@ class Builder
 {
     /**
      * Collection of items.
-     * 
-     * @var Illuminate\Support\Collection 
+     *
+     * @var Illuminate\Support\Collection
      */
     protected $collection;
 
     /**
      * Renderer class name.
-     * 
+     *
      * @var string
      */
     protected $renderer;
@@ -23,21 +22,21 @@ class Builder
     /**
      * Tag name for rendered list markup:
      * 'ul', 'ol', 'div'.
-     * 
+     *
      * @var string
      */
     protected $tag = 'ul';
 
     /**
      * Id string which will be added to root tag.
-     * 
+     *
      * @var string
      */
     protected $id;
 
     /**
      * Class name which will be added to root tag.
-     * 
+     *
      * @var string
      */
     protected $class;
@@ -47,31 +46,31 @@ class Builder
      * 1) method to be called on item to receive current value
      * 2) value that will match when item is selected.
      * ex: getId() --> 1 = selected
-     * 
+     *
      * @var array
      */
     protected $selected = [
         'method' => null,
-        'value' => null
+        'value'  => null,
     ];
 
     /**
      * Constructor.
-     * 
+     *
      * @param Illuminate\Support\Collection $collection
      * @param string $renderer
      */
     public function __construct(\Illuminate\Support\Collection $collection, string $renderer)
     {
         $this->collection = $this->orderItems($collection);
-        $this->renderer = $renderer;
+        $this->renderer   = $renderer;
     }
 
     /**
      * Sets and returns tag name for rendered list markup:
      * 'ul', 'ol', 'div'.
-     * 
-     * @param string $val 
+     *
+     * @param string $val
      * @return string
      */
     public function tag(string $val = null)
@@ -86,7 +85,7 @@ class Builder
     /**
      * Sets and returns class name
      * which will be added to root tag.
-     * 
+     *
      * @param string $val
      * @return string
      */
@@ -102,11 +101,11 @@ class Builder
     /**
      * Sets and returns id string
      * which will be added to root tag.
-     * 
+     *
      * @param string $val
      * @return string
      */
-    public function id (string $val = null)
+    public function id(string $val = null)
     {
         if ($val) {
             $this->id = $val;
@@ -120,7 +119,7 @@ class Builder
      * 1) method to be called on item to receive current value
      * 2) value that will match when item is selected.
      * ex: getId() --> 1 = selected
-     * 
+     *
      * @param callable $method
      * @param mixed $value
      * @return array
@@ -130,7 +129,7 @@ class Builder
         if ($method && $value) {
             $this->selected = [
                 'method' => $method,
-                'value' => $value
+                'value'  => $value,
             ];
             return $this;
         }
@@ -139,15 +138,15 @@ class Builder
 
     /**
      * Builds and returns navigation markup creator object.
-     * 
+     *
      * @return wwaz\Favigation\Markup\ParentChildMarkupCreator
      */
     public function getBuild()
     {
         $nav = new \wwaz\Favigation\Markup\ParentChildMarkupCreator(
-            new ParentChild($this->collection), 
+            new ParentChild($this->collection),
             [
-                'tag' => $this->tag
+                'tag' => $this->tag,
             ]
         );
 
@@ -166,14 +165,14 @@ class Builder
 
     /**
      * Orders items by ordering.
-     * 
+     *
      * @param wwaz\Favigation\Collection $collection
      * @return wwaz\Favigation\Collection
      */
     protected function orderItems(\wwaz\Favigation\Collection $collection): \wwaz\Favigation\Collection
     {
         return $collection->sortBy([
-            fn ($a, $b) => $a->getOrdering() <=> $b->getOrdering(),
+            fn($a, $b) => $a->getOrdering() <=> $b->getOrdering(),
         ]);
     }
 }

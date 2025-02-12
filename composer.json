@@ -1,5 +1,6 @@
 {
     "name": "wwaz/favigation-php",
+    "version": "1.0.0",
     "type": "project",
     "description": "Renders recursive navigation data",
     "keywords": ["navigation", "php"],

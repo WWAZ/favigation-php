@@ -1,5 +1,4 @@
 <?php
-
 namespace wwaz\Favigation;
 
 use Illuminate\Support\Str;
@@ -9,14 +8,14 @@ abstract class ArrayItem extends BaseItem
 {
     /**
      * Data.
-     * 
+     *
      * @var array
      */
     protected $data;
 
     /**
      * Constructor.
-     * 
+     *
      * @param array $data
      */
     public function __construct(array $data)
@@ -32,7 +31,7 @@ abstract class ArrayItem extends BaseItem
 
     protected function getValue($key)
     {
-        if( isset($this->data[$this->getKeys()[$key]]) ){
+        if (isset($this->data[$this->getKeys()[$key]])) {
             return $this->data[$this->getKeys()[$key]];
         }
         return null;
@@ -42,7 +41,7 @@ abstract class ArrayItem extends BaseItem
     {
         return array_merge(parent::toArray(), $this->data);
     }
-    
+
     public function getId(): int | string
     {
         return $this->getValue('id');
@@ -103,7 +102,7 @@ abstract class ArrayItem extends BaseItem
         return $this->setValue('target', $val);
     }
 
-    public function getIcon(): string | null 
+    public function getIcon(): string | null
     {
         return $this->getValue('icon');
     }

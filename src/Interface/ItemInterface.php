@@ -1,11 +1,10 @@
 <?php
-
 namespace wwaz\Favigation\Interface;
 
 interface ItemInterface
-{    
+{
     public function toArray(): array;
-    
+
     public function setId(int | string $val): self;
 
     public function getId(): int | string;

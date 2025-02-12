@@ -1,5 +1,4 @@
 <?php
-
 namespace wwaz\Favigation\Markup\ArrayHandler;
 
 class ParentChild
@@ -32,9 +31,9 @@ class ParentChild
     protected function parentIdCorrection(\wwaz\Favigation\Collection $collection)
     {
         foreach ($collection as $index => $item) {
-            if ($item->getId() == $item->getParentId() ){
-              $item->setParentId(0);
-          }
+            if ($item->getId() == $item->getParentId()) {
+                $item->setParentId(0);
+            }
         }
         return $collection;
     }
@@ -59,7 +58,7 @@ class ParentChild
      * @param int|string $parentId – internal usage only.
      * @return array
      */
-    protected function convertToMultidimensionalIndexArray(\Illuminate\Support\Collection $elements, int|string $parentId = 0, int $level = 0, array $path = [])
+    protected function convertToMultidimensionalIndexArray(\Illuminate\Support\Collection $elements, int | string $parentId = 0, int $level = 0, array $path = [])
     {
         $branch = [];
 
@@ -69,7 +68,7 @@ class ParentChild
             if ($element->getParentId() == $parentId) {
                 $children = $this->convertToMultidimensionalIndexArray($elements, $element->getId(), $level + 1, $path);
                 if ($children) {
-                    foreach($children as $index => $child){
+                    foreach ($children as $index => $child) {
                         $children[$index]->setParent($element);
                     }
                     $element->setChildren($children);
