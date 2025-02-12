@@ -4,7 +4,7 @@
     "type": "project",
     "description": "Renders recursive navigation data",
     "keywords": ["navigation", "php"],
-    "license": "No-License",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "wwaz\\Favigation\\": "src/"
