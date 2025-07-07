@@ -18,6 +18,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "illuminate/support": "^12.19"
+        "laravel/framework": "^10.0|^11.0|^12.0"
     }
 }
