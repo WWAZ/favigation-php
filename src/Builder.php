@@ -73,7 +73,7 @@ class Builder
      * @param string $val
      * @return string
      */
-    public function tag(string $val = null)
+    public function tag(?string $val = null)
     {
         if ($val) {
             $this->tag = $val;
@@ -89,7 +89,7 @@ class Builder
      * @param string $val
      * @return string
      */
-    public function class (string $val = null)
+    public function class (?string $val = null)
     {
         if ($val) {
             $this->class = $val;
@@ -105,7 +105,7 @@ class Builder
      * @param string $val
      * @return string
      */
-    public function id(string $val = null)
+    public function id(?string $val = null)
     {
         if ($val) {
             $this->id = $val;

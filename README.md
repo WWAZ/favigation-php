@@ -6,6 +6,12 @@
 composer require wwaz/favigation-php
 ```
 
+## Requirements
+
+- PHP `^8.1`
+- Composer 2
+- Illuminate Support `^10|^11|^12` (works great in Laravel projects, but can also be used standalone)
+
 ---
 
 ## What it does
@@ -24,12 +30,15 @@ Got raw WordPress menu data? Just pass it in:
 
 ```php
 $menudata = [
-    ['ID' => 1, 'post_parent' => 0, 'menu_order' => 2, 'url' => '/about', 'title' => 'About us'],
-    ['ID' => 2, 'post_parent' => 1, 'menu_order' => 3, 'url' => '/team',  'title' => 'Team'],
-    ['ID' => 3, 'post_parent' => 0, 'menu_order' => 1, 'url' => '/',      'title' => 'Home'],
+    ['ID' => 1, 'menu_item_parent' => 0, 'menu_order' => 2, 'url' => '/about', 'title' => 'About us'],
+    ['ID' => 2, 'menu_item_parent' => 1, 'menu_order' => 3, 'url' => '/team',  'title' => 'Team'],
+    ['ID' => 3, 'menu_item_parent' => 0, 'menu_order' => 1, 'url' => '/',      'title' => 'Home'],
 ];
 
-$favigation = new wwaz\Favigation\Driver\Wordpress\Builder($menudata);
+$favigation = new wwaz\Favigation\Driver\Wordpress\Builder(
+    $menudata,
+    wwaz\Favigation\Driver\BasicMenuRenderer::class
+);
 echo $favigation->toHtml();
 ```
 
@@ -45,7 +54,7 @@ echo $favigation->toHtml();
 </ul>
 ```
 
-Sorting by `menu_order`, nesting via `post_parent` — all handled automatically.
+Sorting by `menu_order`, nesting via `menu_item_parent` — all handled automatically.
 
 ---
 
@@ -121,6 +130,20 @@ Every element, every attribute — fully under your control, without managing th
 ## Custom Drivers
 
 Favigation is extensible — write your own driver to support any data structure. Documentation available in the repository.
+
+---
+
+## Developer Experience
+
+Useful local commands:
+
+```bash
+composer test
+composer analyse
+composer validate
+```
+
+`Driver\Wordpress\Builder` is provided as a backward-compatible alias and internally reuses `WordpressBuilder`.
 
 ---
 

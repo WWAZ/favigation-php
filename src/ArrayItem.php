@@ -25,14 +25,19 @@ abstract class ArrayItem extends BaseItem
 
     protected function setValue($key, $value)
     {
-        $this->data[$this->getKeys()[$key]] = $value;
+        $mappedKey = $this->getKeys()[$key] ?? null;
+        if ($mappedKey === null) {
+            return $this;
+        }
+        $this->data[$mappedKey] = $value;
         return $this;
     }
 
     protected function getValue($key)
     {
-        if (isset($this->data[$this->getKeys()[$key]])) {
-            return $this->data[$this->getKeys()[$key]];
+        $mappedKey = $this->getKeys()[$key] ?? null;
+        if ($mappedKey !== null && isset($this->data[$mappedKey])) {
+            return $this->data[$mappedKey];
         }
         return null;
     }

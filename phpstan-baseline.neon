@@ -1,0 +1,806 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\ArrayItem\\:\\:__construct\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\ArrayItem\\:\\:getValue\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\ArrayItem\\:\\:getValue\\(\\) has parameter \\$key with no type specified\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\ArrayItem\\:\\:setValue\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\ArrayItem\\:\\:setValue\\(\\) has parameter \\$key with no type specified\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\ArrayItem\\:\\:setValue\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\ArrayItem\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\ArrayItem\\:\\:\\$data type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/ArrayItem.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$val \\(string\\) is implicitly nullable via default value null\\.$#"
+			count: 3
+			path: src/Builder.php
+
+		-
+			message: "#^Left side of && is always true\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:__construct\\(\\) has parameter \\$collection with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:class\\(\\) should return string but returns \\$this\\(wwaz\\\\Favigation\\\\Builder\\)\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:getBuild\\(\\) has invalid return type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:id\\(\\) should return string but returns \\$this\\(wwaz\\\\Favigation\\\\Builder\\)\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:orderItems\\(\\) has invalid return type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Collection\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:selected\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:selected\\(\\) should return array but returns \\$this\\(wwaz\\\\Favigation\\\\Builder\\)\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Builder\\:\\:tag\\(\\) should return string but returns \\$this\\(wwaz\\\\Favigation\\\\Builder\\)\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$collection with type wwaz\\\\Favigation\\\\Illuminate\\\\Support\\\\Collection is not subtype of native type Illuminate\\\\Support\\\\Collection\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$collection with type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Collection is not subtype of native type wwaz\\\\Favigation\\\\Collection\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^PHPDoc tag @return with type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Collection is not subtype of native type wwaz\\\\Favigation\\\\Collection\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Parameter \\#1 \\$collection of class wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild constructor expects Illuminate\\\\Support\\\\Collection, wwaz\\\\Favigation\\\\Illuminate\\\\Support\\\\Collection given\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Parameter \\#1 \\$collection of method wwaz\\\\Favigation\\\\Builder\\:\\:orderItems\\(\\) expects wwaz\\\\Favigation\\\\Collection, Illuminate\\\\Support\\\\Collection given\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Parameter \\$collection of method wwaz\\\\Favigation\\\\Builder\\:\\:__construct\\(\\) has invalid type wwaz\\\\Favigation\\\\Illuminate\\\\Support\\\\Collection\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Parameter \\$collection of method wwaz\\\\Favigation\\\\Builder\\:\\:orderItems\\(\\) has invalid type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Collection\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Builder\\:\\:\\$collection \\(wwaz\\\\Favigation\\\\Illuminate\\\\Support\\\\Collection\\) does not accept wwaz\\\\Favigation\\\\Collection\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Builder\\:\\:\\$collection has unknown class wwaz\\\\Favigation\\\\Illuminate\\\\Support\\\\Collection as its type\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Builder\\:\\:\\$selected type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Builder.php
+
+		-
+			message: "#^Class wwaz\\\\Favigation\\\\Collection extends generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Collection\\:\\:__construct\\(\\) has parameter \\$items with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Collection\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Backend\\\\BackendArrayAdapter\\:\\:getKeys\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Driver/Backend/BackendArrayAdapter.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\BasicMenuRenderer\\:\\:build\\(\\) has parameter \\$selected with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Driver/BasicMenuRenderer.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Bootstrap\\\\BootstrapMenuRenderer\\:\\:build\\(\\) has parameter \\$selected with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Driver/Bootstrap/BootstrapMenuRenderer.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressArrayAdapter\\:\\:\\$keys type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressArrayAdapter.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:__call\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:__call\\(\\) has parameter \\$arguments with no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:__call\\(\\) has parameter \\$name with no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:__construct\\(\\) has parameter \\$data with no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:build\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:build\\(\\) has parameter \\$data with no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:\\$build has no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:\\$renderer has no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressBuilder.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressObjectAdapter\\:\\:__construct\\(\\) has parameter \\$item with no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressObjectAdapter.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressObjectAdapter\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressObjectAdapter.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressObjectAdapter\\:\\:\\$item has no type specified\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressObjectAdapter.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressObjectAdapter\\:\\:\\$keys type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Driver/Wordpress/WordpressObjectAdapter.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Interface\\\\ItemInterface\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Interface/ItemInterface.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Interface\\\\RendererInterface\\:\\:build\\(\\) has parameter \\$selected with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Interface/RendererInterface.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:getChildren\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:getKeys\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:getParent\\(\\) has invalid return type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Item\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:getRecursive\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:runGetRecursive\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:runGetRecursive\\(\\) has parameter \\$item with no type specified\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:runGetRecursive\\(\\) has parameter \\$method with no type specified\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:runGetRecursive\\(\\) has parameter \\$res with no type specified\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:setChildren\\(\\) has parameter \\$items with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:setPath\\(\\) has parameter \\$path with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Item\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$parent with type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Item is not subtype of native type wwaz\\\\Favigation\\\\Item\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(wwaz\\\\Favigation\\\\Ite\\)\\: Unexpected token \"\\\\n     \", expected variable at offset 70$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^PHPDoc tag @return with type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Item\\|null is not subtype of native type wwaz\\\\Favigation\\\\Item\\|null\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^PHPDoc tag @throws with type wwaz\\\\Favigation\\\\Exception is not subtype of Throwable$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Parameter \\$parent of method wwaz\\\\Favigation\\\\Item\\:\\:setParent\\(\\) has invalid type wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Item\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Item\\:\\:\\$children type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Item\\:\\:\\$keys type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: src/Item.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:__construct\\(\\) has parameter \\$collection with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:convertToMultidimensionalIndexArray\\(\\) has parameter \\$elements with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:convertToMultidimensionalIndexArray\\(\\) has parameter \\$path with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:convertToMultidimensionalIndexArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:parentIdCorrection\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:parentIdCorrection\\(\\) should return array but returns wwaz\\\\Favigation\\\\Collection\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:toMultidimensionalIndexArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$collection with type wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\Illuminate\\\\Support\\\\Collection is not subtype of native type Illuminate\\\\Support\\\\Collection\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$elements with type wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\Illuminate\\\\Support\\\\Collection is not subtype of native type Illuminate\\\\Support\\\\Collection\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(none\\)\\: Unexpected token \"\\\\n     \\* \", expected variable at offset 93$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$array$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Parameter \\#1 \\$collection of method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:parentIdCorrection\\(\\) expects wwaz\\\\Favigation\\\\Collection, Illuminate\\\\Support\\\\Collection given\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Parameter \\$collection of method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:__construct\\(\\) has invalid type wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\Illuminate\\\\Support\\\\Collection\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Parameter \\$elements of method wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:convertToMultidimensionalIndexArray\\(\\) has invalid type wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\Illuminate\\\\Support\\\\Collection\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\ArrayHandler\\\\ParentChild\\:\\:\\$collection has no type specified\\.$#"
+			count: 1
+			path: src/Markup/ArrayHandler/ParentChild.php
+
+		-
+			message: "#^Access to an undefined property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$options\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:__construct\\(\\) has parameter \\$array with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:__construct\\(\\) has parameter \\$options with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:getSubTag\\(\\) should return string but return statement is missing\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:getUlAttributes\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:getUlAttributes\\(\\) has parameter \\$level with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:getUlAttributes\\(\\) has parameter \\$path with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:setRootAttribute\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(none\\)\\: Unexpected token \"\\\\n     \\* \", expected variable at offset 101$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(none\\)\\: Unexpected token \"\\\\n     \\* \", expected variable at offset 53$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(none\\)\\: Unexpected token \"\\\\n     \\* \", expected variable at offset 54$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(none\\)\\: Unexpected token \"\\\\n     \\* \", expected variable at offset 57$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(none\\)\\: Unexpected token \"\\\\n     \\* \", expected variable at offset 66$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(string value\\)\\: Unexpected token \"value\", expected variable at offset 90$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$allowedTags type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$array type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$childrenKey \\(string\\) does not accept default value of type false\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$contentKey \\(string\\) does not accept default value of type false\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$contentMethod \\(callable\\(\\)\\: mixed\\) does not accept default value of type false\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$liAttributes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$rootAttributes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupCreator\\:\\:\\$ulAttributes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:__construct\\(\\) has parameter \\$array with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:__get\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:__get\\(\\) has parameter \\$key with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:__set\\(\\) has parameter \\$key with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:__set\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:__set\\(\\) with return type void returns \\$this\\(wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\) but should not return anything\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(array\\)\\: Unexpected token \"\\\\n     \", expected variable at offset 50$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\MarkupElement\\:\\:\\$data type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/MarkupElement.php
+
+		-
+			message: "#^Cannot call method getChildren\\(\\) on array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Cannot call method getLevel\\(\\) on array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Cannot call method getPath\\(\\) on array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:__construct\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:buildMarkupData\\(\\) has parameter \\$items with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:buildMarkupData\\(\\) has parameter \\$path with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:buildMarkupData\\(\\) has parameter \\$result with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:buildMarkupData\\(\\) invoked with 6 parameters, 1\\-5 required\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:buildMarkupData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getAfterContent\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getAttributes\\(\\) has parameter \\$attributes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getAttributes\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getAttributes\\(\\) has parameter \\$level with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getAttributes\\(\\) has parameter \\$path with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getAttributes\\(\\) invoked with 5 parameters, 4 required\\.$#"
+			count: 2
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getBeforeContent\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getLiAttributes\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getLiAttributes\\(\\) has parameter \\$level with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getLiAttributes\\(\\) has parameter \\$path with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getLiContent\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getLiContent\\(\\) has parameter \\$level with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getLiContent\\(\\) has parameter \\$path with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getMarkupData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getUlAttributes\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getUlAttributes\\(\\) has parameter \\$level with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:getUlAttributes\\(\\) has parameter \\$path with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:isNode\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:isNode\\(\\) has parameter \\$item with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:liAttributes\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:nodeInfo\\(\\) has parameter \\$item with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:nodeInfo\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:ulAttributes\\(\\) has parameter \\$array with no type specified\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$array$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$item$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$level$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$path$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$tag$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Parameter \\#3 \\$path of method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:liAttributes\\(\\) expects string, array given\\.$#"
+			count: 2
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Parameter \\#3 \\$path of method wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:ulAttributes\\(\\) expects string, array given\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Property wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\:\\:\\$options type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Variable \\$result in isset\\(\\) always exists and is not nullable\\.$#"
+			count: 1
+			path: src/Markup/ParentChildMarkupCreator.php
+
+		-
+			message: "#^Call to an undefined method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\Builder\\:\\:toHtml\\(\\)\\.$#"
+			count: 1
+			path: tests/BuilderTest.php
+
+		-
+			message: "#^Call to an undefined method wwaz\\\\Favigation\\\\Driver\\\\Wordpress\\\\WordpressBuilder\\:\\:toHtml\\(\\)\\.$#"
+			count: 1
+			path: tests/BuilderTest.php
+
+		-
+			message: "#^Call to method toHtml\\(\\) on an unknown class wwaz\\\\Favigation\\\\wwaz\\\\Favigation\\\\Markup\\\\ParentChildMarkupCreator\\.$#"
+			count: 1
+			path: tests/BuilderTest.php
+
+		-
+			message: "#^Cannot call method getBuild\\(\\) on array\\.$#"
+			count: 1
+			path: tests/BuilderTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$method of method wwaz\\\\Favigation\\\\Builder\\:\\:selected\\(\\) expects callable\\(\\)\\: mixed, 'getId' given\\.$#"
+			count: 1
+			path: tests/BuilderTest.php
