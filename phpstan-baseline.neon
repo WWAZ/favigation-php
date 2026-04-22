@@ -41,11 +41,6 @@ parameters:
 			path: src/ArrayItem.php
 
 		-
-			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$val \\(string\\) is implicitly nullable via default value null\\.$#"
-			count: 3
-			path: src/Builder.php
-
-		-
 			message: "#^Left side of && is always true\\.$#"
 			count: 1
 			path: src/Builder.php
