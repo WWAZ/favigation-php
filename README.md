@@ -1,104 +1,129 @@
 # Favigation PHP
 
-Creating HTML markup for navigation elements is straightforward. Favigation streamlines the process, handling the complexities and providing an easy-to-use API to render your navigation-data into HTML.
+**Favigation** turns any navigation data into clean HTML markup — without wrestling with recursion, nested loops, or edge cases.
 
-Through the use of drivers, you can transform virtually any data structure into navigation markup. Favigation provides predefined drivers for platforms like Wordpress and frameworks such as Bootstrap.
+```bash
+composer require wwaz/favigation-php
+```
 
-## Basic usage
+---
 
-Favigation is easy to use. Here's a simple example. Let's render navigation markup using (streamlined) WordPress menu data.
+## What it does
 
-    $menudata = [
-    	[
-	    	'ID'  =>  1,
-	    	'post_parent'  =>  0,
-	    	'menu_order'  =>  2,
-	    	'url'  =>  'about',
-	    	'title'  =>  'About us',
-    	],
-    	[
-	    	'ID'  =>  2,
-	    	'post_parent'  =>  1,
-	    	'menu_order'  =>  3,
-	    	'url'  =>  'Team',
-	    	'title'  =>  'team',
-    	],
-    	[
-	    	'ID'  =>  3,
-	    	'post_parent'  =>  0,
-	    	'menu_order'  =>  1,
-	    	'url'  =>  'homepage',
-	    	'title'  =>  'Home',
-    	],
-    ];
+You give Favigation a flat list of menu items. It automatically builds a correctly nested `<ul>` structure — including sorting, active state, and fully customizable HTML output.
 
-Pass the menu-data to a Favigation builder.
+**Drivers** add out-of-the-box support for different data sources (e.g. WordPress) and UI frameworks (e.g. Bootstrap).
 
-    // Let's build a Favigation object from raw Wordpress menu-data
-    $favigation = new wwaz\Favigation\Driver\Wordpress\Builder($menudata);
-    
-    // Render html
-    echo $favigation->toHtml();
+---
 
-The builder renders the data in the following manner.
+## Examples
 
-    <ul>
-	    <li><a  href="homepage">Homepage</a></li>
-	    <li><a  href="about">About us</a>
-		    <ul>
-			    <li><a  href="team">Team</a></li>
-		    </ul>
-		</li>
-    </ul>
+### 1. Render a WordPress menu in 3 lines
 
+Got raw WordPress menu data? Just pass it in:
 
-## Installation
+```php
+$menudata = [
+    ['ID' => 1, 'post_parent' => 0, 'menu_order' => 2, 'url' => '/about', 'title' => 'About us'],
+    ['ID' => 2, 'post_parent' => 1, 'menu_order' => 3, 'url' => '/team',  'title' => 'Team'],
+    ['ID' => 3, 'post_parent' => 0, 'menu_order' => 1, 'url' => '/',      'title' => 'Home'],
+];
 
-Install Favigation via composer
+$favigation = new wwaz\Favigation\Driver\Wordpress\Builder($menudata);
+echo $favigation->toHtml();
+```
 
-    composer require wwaz/favigation-php
+**Output:**
+```html
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About us</a>
+        <ul>
+            <li><a href="/team">Team</a></li>
+        </ul>
+    </li>
+</ul>
+```
 
-## Custom usage
+Sorting by `menu_order`, nesting via `post_parent` — all handled automatically.
 
-What sets Favigation apart is the separation of data from the view, coupled with a highly customizable rendering process. The builder takes a 1) data collection and a 2) renderer. 
+---
 
-    $favigation = (new wwaz\Favigation\Builder(
-	    new \wwaz\Favigation\Collection($data),
-	    \wwaz\Favigation\Driver\Bootstrap\BootstrapMenuRenderer::class
-    ))
-	    ->tag('ul')
-	    ->id('favigation')
-	    ->selected('getId', 3)
-	    ->getBuild();
+### 2. Bootstrap navigation with active state
 
-Let's go further:
+Want Bootstrap-compatible markup with the current page highlighted?
 
-    $favigation
-    
-	  ->setContent(function($item){
-		  $icon = ''; 
-		  if( $item->getIcon() ){
-				$icon = '<img class="icon" src="' . $icon . '">';
-			}
-			if( $item->getUrl() ){
-				return $icon . '<a' href="' . $item->getUrl() . '">' . $item->getTitle() . '</a>';
-			} 
-			return $icon . '<span>' . $item->getTitle() . '</span>';
-		})
-		
-		->setLiAttribute('data-id', function($item){
-			return $item->getId();
-		})
-		
-		->toHtml();
+```php
+$favigation = (new wwaz\Favigation\Builder(
+    new wwaz\Favigation\Collection($data),
+    wwaz\Favigation\Driver\Bootstrap\BootstrapMenuRenderer::class
+))
+    ->tag('ul')
+    ->id('main-nav')
+    ->selected('getId', 3)  // Marks the item with ID 3 as active
+    ->getBuild()
+    ->toHtml();
+```
 
+The builder handles setting `active` classes — no need to traverse the tree yourself.
 
-## Writing Drivers
+---
 
-...
+### 3. Fully custom HTML — icons, attributes, your own logic
 
+Need total control over the markup?
+
+```php
+$favigation
+    ->setContent(function($item) {
+        $icon = $item->getIcon()
+            ? '<img class="icon" src="' . $item->getIcon() . '">'
+            : '';
+
+        return $item->getUrl()
+            ? $icon . '<a href="' . $item->getUrl() . '">' . $item->getTitle() . '</a>'
+            : $icon . '<span>' . $item->getTitle() . '</span>';
+    })
+    ->setLiAttribute('data-id', function($item) {
+        return $item->getId();
+    })
+    ->toHtml();
+```
+
+**Output:**
+```html
+<ul>
+    <li data-id="3"><a href="/">Home</a></li>
+    <li data-id="1">
+        <img class="icon" src="about.svg"><a href="/about">About us</a>
+        <ul>
+            <li data-id="2"><a href="/team">Team</a></li>
+        </ul>
+    </li>
+</ul>
+```
+
+Every element, every attribute — fully under your control, without managing the tree yourself.
+
+---
+
+## Why Favigation?
+
+| Without Favigation | With Favigation |
+|---|---|
+| Write recursive functions yourself | `toHtml()` |
+| Implement sorting manually | Automatic via `menu_order` |
+| Set active classes by hand | `->selected('getId', $currentId)` |
+| Hard-wire framework-specific markup | Swap out a driver |
+
+---
+
+## Custom Drivers
+
+Favigation is extensible — write your own driver to support any data structure. Documentation available in the repository.
+
+---
 
 ## License
 
-No license – All rights reserved, not open source or free. 
-You cannot modify or redistribute this code without explicit permission from the copyright holder.
+MIT License — see [LICENSE](LICENSE) for details.
